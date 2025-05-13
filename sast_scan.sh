@@ -5,9 +5,9 @@ zip -r project.zip . -x '*.git*'
 # Perform SAST Scan
 RESPONSE=$(curl -X POST \
   -H "Client-ID:23e4567-e89b-12d3-a456-426614174001" \
-  -H "Client-Secret:001533fd62afe7dae19f937f3b7a9c0b" \
+  -H "Client-Secret:2dc6dc201731e5c53632de3196964030" \
   -F "projectZipFile=@project.zip" \
-  -F "applicationId=681b06d74444c907ca6a3584" \
+  -F "applicationId=681b06b04444c907ca6a350c" \
   -F "scanName=New SAST Scan from TeamCity" \
   -F "language=java" \
   https://appsecops-api.intruceptlabs.com/api/v1/integrations/sast-scans)
