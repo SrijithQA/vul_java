@@ -4,8 +4,8 @@ set -e
 zip -r project.zip . -x '*.git*'
 # Perform SAST Scan
 RESPONSE=$(curl -X POST \
-  -H "Client-ID: 23e4567-e89b-12d3-a456-426614174001" \
-  -H "Client-Secret: 001533fd62afe7dae19f937f3b7a9c0b" \
+  -H "Client-ID:23e4567-e89b-12d3-a456-426614174001" \
+  -H "Client-Secret:001533fd62afe7dae19f937f3b7a9c0b" \
   -F "projectZipFile=@project.zip" \
   -F "applicationId=681b06d74444c907ca6a3584" \
   -F "scanName=New SAST Scan from TeamCity" \
